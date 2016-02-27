@@ -16,7 +16,7 @@ func handler (w http.ResponseWriter, r *http.Request){
 	
 	fmt.Fprintf(w, "<h1>Web Client Host Name</h1> <div>%s</div>", string(host_name))
 	
-	res_mn, err := http.Get("http://RESTService-demo-azure.marathon.mesos:5000/api/info/machinename")
+	res_mn, err := http.Get("http://restservice-demo-azure.marathon.mesos:5000/api/info/machinename")
 	if err != nil {
 		fmt.Fprintf(w, "%s", err)
 	}else{
@@ -28,7 +28,7 @@ func handler (w http.ResponseWriter, r *http.Request){
 		fmt.Fprintf(w, "<h1>REST Machine Host Name </h1> <div>%s</div>", string(contents_mn))
 	}
 
-	res_ct, err := http.Get("http://RESTService-demo-azure.marathon.mesos:5000/api/info/currenttime")
+	res_ct, err := http.Get("http://restservice-demo-azure.marathon.mesos:5000/api/info/currenttime")
 	if err != nil {
 		fmt.Fprintf(w, "%s", err)
 	}else{

@@ -14,7 +14,7 @@ func handler (w http.ResponseWriter, r *http.Request){
 		fmt.Fprintf(w, "%s", err)
 	}
 	
-	fmt.Fprintf(w, "<h1>Update 1 - latest</h1>")
+	fmt.Fprintf(w, "<h1>Update 2 - latest</h1>")
 	fmt.Fprintf(w, "<h1>Web Client Host Name</h1> <div>%s</div>", string(host_name))
 	
 	res_mn, err := http.Get("http://restservice-demo-azure.marathon.mesos:5000/api/info/machinename")
